@@ -6,7 +6,7 @@ public class Tarjeta {
 	private int fechaCaducidadAño;
 	private int fechaCaducidadMes;
 
-	public Tarjeta(int numeroTarjeta, int ccv, int fechaCaducidadAño, int fechaCaducidadMes) {
+	public Tarjeta(int ccv, int numeroTarjeta,  int fechaCaducidadAño, int fechaCaducidadMes) {
 		this.numeroTarjeta = numeroTarjeta;
 		this.ccv = ccv;
 		this.fechaCaducidadAño = fechaCaducidadAño;
@@ -14,20 +14,15 @@ public class Tarjeta {
 	}
 
 	public int getnumeroTarjeta() {
-
 		return numeroTarjeta;
 	}
 
 	public int getccv() {
-
 		return ccv;
 	}
 
-	public int getfechaCaducidadAño() {
-		return fechaCaducidadAño;
-	}
-
-	public int getfechaCaducidadMes() {
-		return fechaCaducidadMes;
+	public int[] getfechaCaducidad() {
+		int fechaCaducidad = {fechaCaducidadAño, fechaCaducidadMes};
+		return fechaCaducidad;
 	}
 }
