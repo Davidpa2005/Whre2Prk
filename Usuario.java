@@ -5,26 +5,21 @@ import java.util.ArrayList;
 public class Usuario {
 
 	public String nombre;
+	public Coche coche;
+	public String matricula;
+	public static ArrayList<Coche> ListaCoches;
+	public static ArrayList<Tarjeta> ListaTarjetas;
+	public int precio;
 
 	public Usuario(String nombre) {
 
 		this.nombre = nombre;
 	}
 
-	public static ArrayList<Coche> ListaCoches;
-	public static ArrayList<Tarjeta> ListaTarjetas;
-	public int precio;
+	public short pago(Coche coche, Tarjeta tarjeta, int precio) {
 
-	public void PAGO(ArrayList ListaCoches, ArrayList ListaTarjetas, int precio) {
-
-		this.ListaCoches = ListaCoches;
-		this.ListaTarjetas = ListaTarjetas;
-		this.precio = precio;
-
+		coste = coche.duracion * this.precio;
 	}
-
-	public Coche coche;
-	public String matricula;
 
 	public static void registrarCoche(String matricula) {
 		Coche nuevoCoche = new Coche(matricula);
