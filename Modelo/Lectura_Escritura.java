@@ -12,11 +12,11 @@ public class Lectura_Escritura {
         ArrayList<String> listaPlazasLibres = new ArrayList<String>();
 
         try{
-            File file = new File("/Users/david/Downloads/Whre2Prk-main/plazas.txt");
+            File file = new File("./plazas.txt");
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String[] linea = sc.nextLine().split(";");
-                if (linea[1] == "L") {
+                if (linea[1].equals("L")) {
                     listaPlazasLibres.add(linea[0]);
                 }
             }
@@ -37,7 +37,7 @@ public class Lectura_Escritura {
         ArrayList<String[]>listaPlazasOcupadas = new ArrayList<String[]>();
 
         try {
-            File file = new File("./data/plazas.txt");
+            File file = new File("./plazas.txt");
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String[] linea = sc.nextLine().split(";");
@@ -56,7 +56,7 @@ public class Lectura_Escritura {
 
     public void asignarPlaza(Plaza plaza, Coche coche) {
         try {
-            File file = new File("./data/plazas.txt");
+            File file = new File("./plazas.txt");
             Scanner sc = new Scanner(file);
             PrintWriter printW = new PrintWriter(file);
 
@@ -78,7 +78,7 @@ public class Lectura_Escritura {
     
     public void desasignarPlaza(Plaza plaza, Coche coche) {
         try {
-            File file = new File("./data/plazas.txt");
+            File file = new File("./plazas.txt");
             Scanner sc = new Scanner(file);
             PrintWriter printW = new PrintWriter(file);
 

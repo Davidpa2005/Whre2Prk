@@ -19,7 +19,7 @@ public class VentanaQR extends JFrame{
         registrarCoche = new JButton("Registrar Coche");
         registrarTarj = new JButton("Registar Tarjeta");
 
-        ImageIcon imagenQr = new ImageIcon("/Users/david/Downloads/Whre2Prk-main/Qr.jpeg"); // Asegúrate de proporcionar la ruta correcta
+        ImageIcon imagenQr = new ImageIcon("./Qr.jpeg"); // Asegúrate de proporcionar la ruta correcta
         // Crear un JLabel y establecer el ImageIcon como su icono
         JLabel qr = new JLabel(imagenQr);
         // los colocamos

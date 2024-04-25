@@ -18,10 +18,9 @@ public class VentanaParking extends JFrame {
     public void crearVista() {
         Lectura_Escritura lect_escrt = new Lectura_Escritura();
         String[] plazasLibres = lect_escrt.leerPlazasLibres();
-        //String[] plazas = {"2478r2iu48", "33iu424i", "234yr8"};
         JComboBox cb = new JComboBox(plazasLibres);
         aparcarBoton = new JButton("Aparcado");
-        ImageIcon imagen = new ImageIcon("/Users/david/Downloads/Whre2Prk-main/WhatsApp Image 2024-04-25 at 12.38.04.jpeg");
+        ImageIcon imagen = new ImageIcon("./WhatsApp Image 2024-04-25 at 12.38.04.jpeg");
         Image imagen1 = imagen.getImage();
         imagen1 = imagen1.getScaledInstance(250, 300,0);
         ImageIcon imagen2 = new ImageIcon(imagen1);
