@@ -1,34 +1,38 @@
 package Vista;
 
 import java.awt.FlowLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 
-import Control.Controlador;
+import javax.swing.*;
+import Control.*;
 
 public class VentanaQR extends JFrame{
 
     public Controlador controlador;
-    public JButton miBoton;
-    public JButton miOtroBoton;
+    public JButton visualizarParking;
+    public JButton registrarCoche;
+    public JButton registrarTarj;
     
     public void crearVista() {
         // creamos los botones
 
-        miBoton = new JButton("Click");
-        ImageIcon imageIcon = new ImageIcon("/Users/david/Downloads/Whre2Prk-main/Qr.jpeg"); // Asegúrate de proporcionar la ruta correcta
+        visualizarParking = new JButton("Empezar a Aparcar");
+        registrarCoche = new JButton("Registrar Coche");
+        registrarTarj = new JButton("Registar Tarjeta");
+
+        ImageIcon imagenQr = new ImageIcon("/Users/david/Downloads/Whre2Prk-main/Qr.jpeg"); // Asegúrate de proporcionar la ruta correcta
         // Crear un JLabel y establecer el ImageIcon como su icono
-        JLabel label = new JLabel(imageIcon);
+        JLabel qr = new JLabel(imagenQr);
         // los colocamos
         this.getContentPane().setLayout(new FlowLayout());
-        this.getContentPane().add(label);
-        this.getContentPane().add(miBoton);
+        this.getContentPane().add(qr);
+        this.getContentPane().add(visualizarParking);
+        this.getContentPane().add(registrarCoche);
+        this.getContentPane().add(registrarTarj);
         
-
         // registramos los controladores
-        miBoton.addActionListener(controlador);
+        visualizarParking.addActionListener(controlador);
+        registrarCoche.addActionListener(controlador);
+        registrarTarj.addActionListener(controlador);
 
         // Hacemos todo visible
         this.setVisible(true);

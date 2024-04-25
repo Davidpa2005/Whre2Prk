@@ -21,16 +21,15 @@ public class Plaza {
 
 	}
 
-}
-/*
-	public long eliminarCoche(){
+	public long eliminarCoche() {
 		this.cocheAsignado=null;
 		this.horaSalida=LocalDate.now();
 		this.duracion = ChronoUnit.HOURS.between(horaEntrada, horaSalida);
 		return duracion;
 	}
 }
-*/
+
+
 //	public long calcularDuracionEstacionamientoEnHoras() {
 // if (horaEntrada == null || horaSalida == null) {
 // throw new IllegalStateException("No se han establecido las marcas de tiempo

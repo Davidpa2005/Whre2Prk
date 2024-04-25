@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 public class Lectura_Escritura {
 
-    public ArrayList<String> leerPlazasLibres() {
+    public String[] leerPlazasLibres() {
 
         ArrayList<String> listaPlazasLibres = new ArrayList<String>();
 
         try{
-            File file = new File("./data/plazas.txt");
+            File file = new File("/Users/david/Downloads/Whre2Prk-main/plazas.txt");
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String[] linea = sc.nextLine().split(";");
@@ -21,10 +21,15 @@ public class Lectura_Escritura {
                 }
             }
             sc.close();
+            
         } catch (Exception e) {
             System.out.println(e);
         }
-        return listaPlazasLibres;
+        String[] plazaslibres = new String[listaPlazasLibres.size()];
+        for (int i = 0; i < listaPlazasLibres.size(); i++) {
+            plazaslibres[i] = listaPlazasLibres.get(i);
+        }
+        return plazaslibres;
     }
 
     public ArrayList<String[]> leerPlazasOcupadas() {
