@@ -1,13 +1,15 @@
 package Modelo;
-import java.util.ArrayList;
 
 public class Usuario {
 
 	public String nombre;
+	public Tarjeta tarjeta;
 	public Coche coche;
 	public String matricula;
-	public static ArrayList<Coche> ListaCoches;
-	public static ArrayList<Tarjeta> ListaTarjetas;
+	public Coche[] listaCoches ;
+	public Tarjeta[] listaTarjetas;
+	private int i = 0;
+	private int j = 0;
 	
 
 	public Usuario(String nombre) {
@@ -21,21 +23,20 @@ public class Usuario {
 		return coste;
 	}
 
-	public static void registrarCoche(String matricula) {
+	public void registrarCoche(String matricula) {
 		Coche nuevoCoche = new Coche(matricula);
-		ListaCoches.add(nuevoCoche);
+		listaCoches[i] = nuevoCoche;
+		i++;
 	}
 
-	public Tarjeta tarjeta;
 	public int cvv;
 	public int numero;
 	public int fecha;
 
-	public static void registrarTarjeta(int cvv, int numero, int fecha) {
+	public void registrarTarjeta(int cvv, int numero, int añoCaducidad, int mesCaducidad) {
 
-		Tarjeta nuevaTarjeta = new Tarjeta(cvv, numero, fecha, fecha);
-
-		ListaTarjetas.add(nuevaTarjeta);
-
+		Tarjeta nuevaTarjeta = new Tarjeta(cvv, numero, añoCaducidad, mesCaducidad);
+		listaTarjetas[j] = nuevaTarjeta;
+		j++;
 	}
 }

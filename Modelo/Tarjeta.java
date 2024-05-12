@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Tarjeta {
-	private int numeroTarjeta;
+	protected int numeroTarjeta;
 	private int ccv;
 	private int fechaCaducidadAño;
 	private int fechaCaducidadMes;

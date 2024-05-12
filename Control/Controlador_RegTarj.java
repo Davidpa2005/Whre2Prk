@@ -18,7 +18,14 @@ public class Controlador_RegTarj implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == ventanaRegistroTarj.registarButton) {
+            int numTarjeta = Integer.parseInt(ventanaRegistroTarj.numeroTarj.getText());
+            int cvv = Integer.parseInt(ventanaRegistroTarj.cvv.getText());
+            int mesCaducidad = Integer.parseInt(ventanaRegistroTarj.mesCaducidad.getText());
+            int añoCaducidad = Integer.parseInt(ventanaRegistroTarj.añoCaducidad.getText());
+
+            sistema_Conductor.usuario.registrarTarjeta(cvv, numTarjeta, añoCaducidad, mesCaducidad);
             
+
         }
     }
     

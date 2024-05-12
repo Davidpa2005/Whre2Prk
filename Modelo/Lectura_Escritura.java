@@ -41,7 +41,7 @@ public class Lectura_Escritura {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String[] linea = sc.nextLine().split(";");
-                if (linea[1] == "O") {
+                if (linea[1].equals("O")) {
                     String[] plaza = {linea[0], linea[2]};
                     listaPlazasOcupadas.add(plaza);
                 }
@@ -117,14 +117,15 @@ public class Lectura_Escritura {
         return listaPagosRealizados;
     }
 
-    public void registrarPagosrealizados(Usuario usuario){
+    public void registrarPagosrealizados(Usuario usuario) {
         try {
             File file = new File("./data/pagosrealizdos.txt");
             Scanner sc = new Scanner(file);
             PrintWriter printW = new PrintWriter(file);
-            
-            while(sc.hasNextLine()) {
-                printW.write(usuario.coche.matricula + ";" + usuario.pago(usuario.coche, usuario.tarjeta)+ ";"+usuario.tarjeta); 
+
+            while (sc.hasNextLine()) {
+                printW.write(usuario.coche.matricula + ";" + usuario.pago(usuario.coche, usuario.tarjeta) + ";"
+                        + usuario.tarjeta);
             }
             sc.close();
             printW.close();

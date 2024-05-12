@@ -13,7 +13,6 @@ public class Controlador implements ActionListener{
     VentanaRegistroTarj ventanaRegistroTarj;
     Sistema_Conductor sistema_Conductor;
 
-
     public Controlador(Sistema_Conductor sistemaConductor, VentanaQR ventQr, VentanaParking ventanaParking, VentanaRegistroCoche ventanaRegistroCoche, VentanaRegistroTarj ventanaRegistroTarj) {
         this.ventanaQR = ventQr;
         this.ventanaParking = ventanaParking;

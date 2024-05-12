@@ -17,6 +17,11 @@ public class Controlador_RegCoche implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == ventanaRegistroCoche.registrarCocheBoton) {
+            String matricula = ventanaRegistroCoche.matricula.getText();
+            
+            sistema_Conductor.usuario.registrarCoche(matricula);
+        }
     }
     
 }

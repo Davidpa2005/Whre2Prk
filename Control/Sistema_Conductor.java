@@ -1,10 +1,13 @@
 package Control;
+import Modelo.Usuario;
 import Vista.VentanaParking;
 import Vista.VentanaQR;
 import Vista.VentanaRegistroCoche;
 import Vista.VentanaRegistroTarj;
 
 public class Sistema_Conductor {
+    public Usuario usuario = new Usuario("David");
+    
     public static void main(String[] args) {
 
         Sistema_Conductor sistema = new Sistema_Conductor();

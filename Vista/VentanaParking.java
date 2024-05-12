@@ -25,6 +25,7 @@ public class VentanaParking extends JFrame {
         imagen1 = imagen1.getScaledInstance(250, 300,0);
         ImageIcon imagen2 = new ImageIcon(imagen1);
         JLabel imagenParking = new JLabel(imagen2);
+        
         // los colocamos
         this.getContentPane().setLayout(new FlowLayout());
         this.getContentPane().add(imagenParking);
